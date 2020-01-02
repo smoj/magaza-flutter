@@ -12,97 +12,84 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Magaza'),
+          title: Text('Detail Page Holder'),
         ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
+        body: SingleChildScrollView(
+          child: Column(
             children: <Widget>[
-              Container(
-                color: Color.fromRGBO(28, 27, 27, 1),
-                height: 30,
-              ),
-              DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Color.fromRGBO(28, 27, 27, 1)
-                ),
-                padding: EdgeInsets.zero,
-                margin: EdgeInsets.zero,
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text('Hello,', style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.w300
-                      ),),
-                      Text('Elizabeth Hurley', style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Yrsa',
-                        fontSize: 40,
-                        fontWeight: FontWeight.w600
-                      ),)
-                    ],
+              Stack(
+                children: <Widget>[
+                  FittedBox(
+                    fit: BoxFit.fill,
+                    child: Image.asset('assets/magaza/feed-pic-1.png'),
                   ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.zero,
-                color: Color.fromRGBO(28, 27, 27, 1),
-                child: Column(
-                  children: <Widget>[
-                    ListTile(
-                      title: Text('Links', style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: 'Montserrat',
-                        fontSize: 18
-                      ),),
-                      leading: Icon(Icons.ac_unit, color: Colors.white,),
-                      trailing: Container(
-                        padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                        width: 30,
-                        height: 30,
-                        child: Text('89', textAlign: TextAlign.center, style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w600
+                  Positioned(
+                    bottom: 30,
+                    left: 55,
+                    right: 20,
+                    child: Column(
+                      children: <Widget>[
+                        Text('Pohoda festival one of the best in Europe', style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 43,
+                            fontFamily: 'Yrsa',
+                            fontWeight: FontWeight.w600
                         ),),
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(50)
-                        ),
-                      ),
+                        SizedBox(height: 10,),
+                        Row(
+                          children: <Widget>[
+                            Text('0 Comments', style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w600
+                            ),),
+                            SizedBox(width: 15,),
+                            Text('5 Likes', style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w600
+                            ),),
+                            SizedBox(width: 15,),
+                            Text('26 Shares', style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w600
+                            ),),
+                          ],
+                        )
+                      ],
                     ),
-                    ListTile(
-                      title: Text('Settings', style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Montserrat',
-                          fontSize: 18
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    left: 25,
+                    child: Container(
+                      width: 1,
+                      height: 200,
+                      color: Color.fromRGBO(255, 255, 255, 0.5),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 215,
+                    left: 15,
+                    child: RotatedBox(
+                      quarterTurns: 3,
+                      child: Text('MUSIC', style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Montserrat',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700
                       ),),
                     ),
-                  ],
-                ),
+                  )
+                ],
               )
             ],
           ),
-        ),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Stack(
-              children: <Widget>[
-                Container(
-                  color: Colors.red,
-                  height: 400,
-                )
-              ],
-            )
-          ),
-        ),
+        )
       ),
     );
   }
