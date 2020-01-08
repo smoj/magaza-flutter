@@ -62,6 +62,8 @@ flutter:
         - asset: assets/magaza/fonts/Yrsa-Regular.ttf
         - asset: assets/magaza/fonts/Yrsa-Bold.ttf
           weight: 600
+        - asset: assets/magaza/fonts/Yrsa-Medium.ttf
+          weight: 500
     - family: Montserrat
       fonts:
         - asset: assets/magaza/fonts/Montserrat-SemiBold.ttf
