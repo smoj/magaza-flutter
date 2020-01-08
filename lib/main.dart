@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
-            child: DetailScreen(),
+            child: HomeScreen(), // Change to DetailScreen() for detail page
           ),
         )
       ),
