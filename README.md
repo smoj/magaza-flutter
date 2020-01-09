@@ -1,16 +1,28 @@
-# magaza_flutter
+# Flutter Magazine App Theme
 
-A Flutter App for mobile news apps
+A custom UI for Magazine/News apps build using flutter
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+- Clone/Download the repo/zip to your system.
+- In your computer terminal (in the project root folder), run `flutter pub get` to download all dependencies
 
-A few resources to get you started if this is your first Flutter project:
+### For Android:
+- Launch Android Studio with the project selected
+- Open the AVD Manager by clickng the AVD Manager button
+[![N|Solid](https://audacitus.com/furniture/1-AndroidStudio.png)](#)
+- Launch your Virtual Device from the AVD Manager list (or to use your phone, plug it in and make sure its unlocked. You phone should have had developer options enabled)
+[![N|Solid](https://audacitus.com/furniture/2-AVDManager.png)](#)
+- Press the play button to run the code
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### For iOS:
+- Open the `magaza_flutter/ios/Runner` folder using Xcode. You can also do this via android studio.
+[![N|Solid](https://audacitus.com/furniture/3-OpenInXcode.png)](#)
+- In Xcode, ensure the Runner is selected. Under the general tab, ensure a team is selected
+[![N|Solid](https://audacitus.com/furniture/4-XCode-Team.png)](#)
+- In the terminal open your simulator using `open -a simulator`
+- in the terminal, run `flutter run -d all` Runs the app on all virtual/real devices available at run time
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Switching Screens
+- THe code for review has two screens: `HomeScreen()` and `DetailScreen()`. You can swtich between the two by swapping the child widget in `magaza_flutter/lib/main.dart` on line 16
