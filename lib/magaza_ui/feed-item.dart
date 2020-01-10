@@ -36,20 +36,28 @@ class FeedItem extends StatelessWidget {
             height: 400,
           ),
         ),
-        Padding(
-          padding: EdgeInsets.fromLTRB(6, 20, 0, 0),
-          child: RotatedBox(
-            quarterTurns: 1,
-            child: Text(this.category, style: TextStyle(
-                color: Colors.white,
-                fontFamily: 'Montserrat',
-                fontSize: 14
-            ),),
+        Positioned(
+          top: 0,
+          left: 0,
+          bottom: 200,
+          right: 0,
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(6, 20, 0, 0),
+            child: RotatedBox(
+              quarterTurns: 3,
+              child: Text(this.category, style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Montserrat',
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 8
+              ),),
+            ),
           ),
         ),
         Positioned(
           bottom: 0,
-          top: 120,
+          top: 220,
           left: 13,
           child: Container(
             width: 1,
@@ -59,7 +67,7 @@ class FeedItem extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: 30,
+          bottom: 40,
           left: 40,
           right: 20,
           child: Column(
@@ -77,6 +85,8 @@ class FeedItem extends StatelessWidget {
                   SizedBox(width: 7,),
                   Text(this.timestamp, style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.normal,
                     fontSize: 20
                   ),),
                 ],

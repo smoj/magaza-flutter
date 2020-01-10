@@ -7,21 +7,21 @@ class HomeScreen extends StatelessWidget {
     return Column(
       children: <Widget>[
         FeedItem(
-          title: 'The next best thing',
+          title: 'Himalayas',
           timestamp: '23 Mins ago',
-          category: 'SOCIAL LIFE',
+          category: 'SOCIAL',
           imageUrl: 'https://i.picsum.photos/id/866/400/400.jpg',
         ),
         FeedItem(
-          title: 'The next best thing',
-          timestamp: '23 Mins ago',
-          category: 'SOCIAL LIFE',
+          title: 'Seaside Musings',
+          timestamp: '11 Mins ago',
+          category: 'TRAVEL',
           imageUrl: 'https://i.picsum.photos/id/372/400/400.jpg',
         ),
         FeedItem(
-          title: 'The next best thing',
-          timestamp: '23 Mins ago',
-          category: 'SOCIAL LIFE',
+          title: 'Aurora Dust',
+          timestamp: '5 Mins ago',
+          category: 'LIFE',
           imageUrl: 'https://i.picsum.photos/id/974/400/400.jpg',
         )
       ],

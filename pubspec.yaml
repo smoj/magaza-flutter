@@ -68,6 +68,8 @@ flutter:
       fonts:
         - asset: assets/magaza/fonts/Montserrat-SemiBold.ttf
           weight: 700
+        - asset: assets/magaza/fonts/Montserrat-Regular.ttf
+          weight: 600
         - asset: assets/magaza/fonts/Montserrat-Light.ttf
           weight: 300
   #
