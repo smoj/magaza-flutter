@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey.shade300,
+        backgroundColor: Colors.white,
         drawer: Drawer(
           child: Container(
             color: Color.fromRGBO(28, 27, 27, 1),
@@ -107,11 +107,35 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(0, 0, 0, 16),
+                  color: Color.fromRGBO(28, 27, 27, 1),
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(height: 100,),
+                      Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
+                      ListTile(
+                          title: Text('Logout', style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Montserrat',
+                              fontSize: 18
+                          ),),
+                          leading: Icon(Icons.exit_to_app, color: Colors.white,),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
         ),
         appBar: AppBar(
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+            )
+          ],
           backgroundColor: Colors.white,
           iconTheme: IconThemeData(
             color: Colors.black
@@ -124,7 +148,7 @@ class MyApp extends StatelessWidget {
         ),
         body: SafeArea(
           child: SingleChildScrollView(
-            child: HomeScreen(), // Change to DetailScreen() for detail page
+            child: DetailScreen(), // Change to DetailScreen() for detail page
           ),
         )
       ),
