@@ -24,5 +24,11 @@ A custom UI for Magazine/News apps build using flutter
 - in the terminal, run `flutter run -d all` Runs the app on all virtual/real devices available at run time
 
 
-## Switching Screens
-- THe code for review has two screens: `HomeScreen()` and `DetailScreen()`. You can swtich between the two by swapping the child widget in `magaza_flutter/lib/main.dart` on line 16
+## Reviewing Screens
+You can access the following screens:
+- HomeScreen
+- DetailScreen
+- SidemenuScreen
+
+Tapping any feed item on the HomeScreen will take you to the detail screen.
+Tapping the menubar from the HomeScreen will bring up the sidebar menu.
