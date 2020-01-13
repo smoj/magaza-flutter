@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:magaza_flutter/magaza_ui/feed-item.dart';
 import 'package:magaza_flutter/magaza_ui/screens/detail.dart';
 import 'package:magaza_flutter/magaza_ui/screens/home.dart';
+import 'package:magaza_flutter/magaza_ui/screens/login.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
         drawer: Drawer(
@@ -148,7 +150,7 @@ class MyApp extends StatelessWidget {
         ),
         body: SafeArea(
           child: SingleChildScrollView(
-            child: DetailScreen(), // Change to DetailScreen() for detail page
+            child: HomeScreen(), // Change to DetailScreen() for detail page
           ),
         )
       ),
