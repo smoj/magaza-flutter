@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magaza_flutter/magaza_ui/feed-item.dart';
+import 'package:magaza_flutter/magaza_ui/screens/auth_tab.dart';
 import 'package:magaza_flutter/magaza_ui/screens/detail.dart';
 import 'package:magaza_flutter/magaza_ui/screens/home.dart';
 import 'package:magaza_flutter/magaza_ui/screens/login.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/' : (context) => HomeScreen(),
+        '/' : (context) => AuthTabScreen(),
         '/detail' : (context) => DetailScreen()
       },
       debugShowCheckedModeBanner: false,
