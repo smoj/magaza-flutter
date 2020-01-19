@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                           /*...*/
                         },
                         child: Text(
-                          "Login with Email",
+                          "Sign up",
                           style: TextStyle(
                               fontSize: 20.0,
                               fontFamily: 'Montserrat',
@@ -115,7 +115,7 @@ class LoginScreen extends StatelessWidget {
                 child: FlatButton(
                   padding: EdgeInsets.zero,
                   child: Text(
-                    "Forgot Password?",
+                    "Already have an account? Sign in.",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontSize: 15.0,
@@ -158,7 +158,7 @@ class LoginScreen extends StatelessWidget {
                             SizedBox(width: 10,),
                             Icon(Icons.contacts),
                             Spacer(),
-                            Text('Login with Social', style: TextStyle(
+                            Text('Social Signup', style: TextStyle(
                                 fontSize: 20.0,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w600

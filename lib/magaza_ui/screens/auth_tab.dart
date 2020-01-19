@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:magaza_flutter/magaza_ui/screens/auth_tab.dart';
 import 'package:magaza_flutter/magaza_ui/screens/login.dart';
+import 'package:magaza_flutter/magaza_ui/screens/register.dart';
 
 class AuthTabScreen extends StatelessWidget {
   @override
@@ -34,9 +34,7 @@ class AuthTabScreen extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             LoginScreen(),
-            Center(
-              child: Text('Hello there'),
-            ),
+            RegisterScreen()
           ],
         ),
       ),
