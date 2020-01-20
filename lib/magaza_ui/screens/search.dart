@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:magaza_flutter/magaza_ui/article-item.dart';
+import 'package:magaza_flutter/magaza_ui/single-widgets.dart';
 
 class SearchScreen extends StatelessWidget {
   @override

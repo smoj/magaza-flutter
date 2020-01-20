@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:magaza_flutter/magaza_ui/feed-item.dart';
+import 'package:magaza_flutter/magaza_ui/widgets/feed-item.dart';
 import 'package:magaza_flutter/magaza_ui/screens/auth_tab.dart';
 import 'package:magaza_flutter/magaza_ui/screens/detail.dart';
 import 'package:magaza_flutter/magaza_ui/screens/home.dart';
@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/' : (context) => HomeScreen(),
-        '/detail' : (context) => DetailScreen()
+        '/detail' : (context) => DetailScreen(),
+        '/login' : (context) => AuthTabScreen(),
+        '/search' : (context) => SearchScreen()
       },
       debugShowCheckedModeBanner: false,
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:magaza_flutter/magaza_ui/feed-item.dart';
+import 'package:magaza_flutter/magaza_ui/single-widgets.dart';
 import 'package:magaza_flutter/magaza_ui/screens/sidemenu.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,6 +12,9 @@ class HomeScreen extends StatelessWidget {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
+              onPressed: (){
+                Navigator.pushNamed(context, '/search');
+              },
             )
           ],
           backgroundColor: Colors.white,

@@ -16,7 +16,7 @@ class DetailScreen extends StatelessWidget {
           ),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.search),
+              icon: Icon(Icons.bookmark_border),
             )
           ],
           backgroundColor: Colors.white,
