@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                       title: 'Himalayas',
                       timestamp: '23 Mins ago',
                       category: 'SOCIAL',
-                      imageUrl: 'https://i.picsum.photos/id/866/400/400.jpg',
+                      imageUrl: 'https://i.picsum.photos/id/866/300/400.jpg',
                     ),
                   ),
                   FlatButton(
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                       title: 'Seaside Musings',
                       timestamp: '11 Mins ago',
                       category: 'TRAVEL',
-                      imageUrl: 'https://i.picsum.photos/id/372/400/400.jpg',
+                      imageUrl: 'https://i.picsum.photos/id/372/400/200.jpg',
                     ),
                   ),
                   FlatButton(
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                       title: 'Aurora Dust',
                       timestamp: '5 Mins ago',
                       category: 'LIFE',
-                      imageUrl: 'https://i.picsum.photos/id/974/400/400.jpg',
+                      imageUrl: 'https://i.picsum.photos/id/974/400/300.jpg',
                     ),
                   )
                 ],
