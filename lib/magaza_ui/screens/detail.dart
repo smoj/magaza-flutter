@@ -37,7 +37,7 @@ class DetailScreen extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         width: MediaQuery.of(context).size.width,
-                          child: Image.network('https://picsum.photos/300/200', fit: BoxFit.fill,)
+                          child: Image.network('https://picsum.photos/300/300', fit: BoxFit.fill,)
                       ),
                       Positioned(
                         top: 0,
@@ -82,7 +82,7 @@ class DetailScreen extends StatelessWidget {
                           children: <Widget>[
                             Text('Pohoda festival one of the best in Europe', style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 43,
+                                fontSize: 33,
                                 fontFamily: 'Yrsa',
                                 fontWeight: FontWeight.w700,
                                 height: 1

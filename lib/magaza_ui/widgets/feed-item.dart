@@ -69,7 +69,7 @@ class FeedItem extends StatelessWidget {
                   color: Colors.white,
                   fontFamily: 'Yrsa',
                   fontWeight: FontWeight.w600,
-                  fontSize: 40
+                  fontSize: 33
               ),),
               Row(
                 children: <Widget>[
