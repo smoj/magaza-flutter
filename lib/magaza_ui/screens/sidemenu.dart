@@ -73,17 +73,23 @@ class SideMenuScreen extends StatelessWidget {
                   ),
                   Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
                   ListTile(
-                    title: Text('Music', style: TextStyle(
+                    title: Text('Home', style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
                         fontFamily: 'Montserrat',
                         fontSize: 18
                     ),),
                     leading: Icon(Icons.music_note, color: Colors.white,),
+                    onTap: (){
+                      Navigator.pushNamed(context, '/');
+                    },
                   ),
                   Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
                   ListTile(
-                    title: Text('Lifestyle', style: TextStyle(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/login');
+                    },
+                    title: Text('Login/Register', style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
                         fontFamily: 'Montserrat',
@@ -93,7 +99,23 @@ class SideMenuScreen extends StatelessWidget {
                   ),
                   Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
                   ListTile(
-                    title: Text('Sports', style: TextStyle(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/detail');
+                    },
+                    title: Text('Detail Page', style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Montserrat',
+                        fontSize: 18
+                    ),),
+                    leading: Icon(Icons.border_all, color: Colors.white,),
+                  ),
+                  Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
+                  ListTile(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/search');
+                    },
+                    title: Text('Search', style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
                         fontFamily: 'Montserrat',

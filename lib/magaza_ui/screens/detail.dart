@@ -35,9 +35,18 @@ class DetailScreen extends StatelessWidget {
                 children: <Widget>[
                   Stack(
                     children: <Widget>[
-                      FittedBox(
-                        fit: BoxFit.fill,
-                        child: Image.asset('assets/magaza/feed-pic-1.png'),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                          child: Image.network('https://picsum.photos/300/200', fit: BoxFit.fill,)
+                      ),
+                      Positioned(
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0,
+                        child: Container(
+                            color: Color.fromRGBO(0, 0, 0, 0.4)
+                        ),
                       ),
                       Positioned(
                         right: 15,
@@ -68,7 +77,7 @@ class DetailScreen extends StatelessWidget {
                       Positioned(
                         bottom: 30,
                         left: 55,
-                        right: 20,
+                        right: 55,
                         child: Column(
                           children: <Widget>[
                             Text('Pohoda festival one of the best in Europe', style: TextStyle(
@@ -116,17 +125,24 @@ class DetailScreen extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        bottom: 215,
+                        bottom: 20,
                         left: 15,
-                        child: RotatedBox(
-                          quarterTurns: 3,
-                          child: Text('MUSIC', style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Montserrat',
-                              fontSize: 15,
-                              fontWeight: FontWeight.w700,
-                              letterSpacing: 8
-                          ),),
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Color.fromRGBO(0, 0, 0, 0.5),
+                              borderRadius: BorderRadius.circular(5)
+                          ),
+                          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                          child: RotatedBox(
+                            quarterTurns: 3,
+                            child: Text('MUSIC', style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Montserrat',
+                                fontSize: 10,
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: 8
+                            ),),
+                          ),
                         ),
                       )
                     ],
