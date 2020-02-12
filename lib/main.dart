@@ -10,8 +10,9 @@ import 'package:magaza_flutter/magaza_ui/screens/sidemenu.dart';
 import 'package:magaza_flutter/magaza_ui/screens/search.dart';
 import 'package:flutter/services.dart';
 
-void main(){
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_){
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_){
     runApp(MyApp());
   });
 }
