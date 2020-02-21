@@ -14,7 +14,13 @@ class FeedItem extends StatelessWidget {
       children: <Widget>[
         Container(
           width: MediaQuery.of(context).size.width,
-          child: Image.network('$imageUrl', fit: BoxFit.fitWidth,),
+          child: FittedBox(
+            child: FadeInImage(
+              image: NetworkImage(this.imageUrl),
+              placeholder: AssetImage('assets/loading.gif'),
+            ),
+            fit: BoxFit.fitWidth,
+          ),
         ),
         Positioned(
           top: 0,
