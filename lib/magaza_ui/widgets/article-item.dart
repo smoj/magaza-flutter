@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_networkimage/provider.dart';
+import 'package:flutter_advanced_networkimage/transition.dart';
+//import 'package:flutter_advanced_networkimage/zoomable.dart';
 
 class ArticleItem extends StatelessWidget {
 
@@ -18,7 +21,17 @@ class ArticleItem extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Container(
-              child: Image.network(this.url),
+              child: TransitionToImage(
+                image: AdvancedNetworkImage(
+                  this.url,
+                  loadedCallback: () => print('Network Image $url loaded.'),
+                  loadFailedCallback: () => print('Oh, no! $url failed!'),
+                  timeoutDuration: Duration(seconds: 30),
+                  retryLimit: 2,
+                ),
+                fit: BoxFit.fitWidth,
+                enableRefresh: true,
+              ),
             ),
           ),
           Expanded(

@@ -17,16 +17,16 @@ class FeedItem extends StatelessWidget {
       children: <Widget>[
         Container(
           constraints: BoxConstraints(
-            minHeight: 300
+            minHeight: 200
           ),
           width: MediaQuery.of(context).size.width,
           child: TransitionToImage(
             image: AdvancedNetworkImage(
               this.imageUrl,
-              loadedCallback: () => print('It works!'),
-              loadFailedCallback: () => print('Oh, no!'),
+              loadedCallback: () => print('Network Image $imageUrl loaded.'),
+              loadFailedCallback: () => print('Oh, no! $imageUrl failed!'),
               timeoutDuration: Duration(seconds: 30),
-              retryLimit: 1,
+              retryLimit: 2,
             ),
             fit: BoxFit.fitWidth,
             enableRefresh: true,

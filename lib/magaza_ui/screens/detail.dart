@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:magaza_flutter/magaza_ui/screens/sidemenu.dart';
+import 'package:flutter_advanced_networkimage/provider.dart';
+import 'package:flutter_advanced_networkimage/transition.dart';
+import 'package:flutter_advanced_networkimage/zoomable.dart';
 
 class DetailScreen extends StatelessWidget {
   @override
@@ -36,8 +39,19 @@ class DetailScreen extends StatelessWidget {
                   Stack(
                     children: <Widget>[
                       Container(
+                        constraints: BoxConstraints(
+                          minHeight: 300
+                        ),
                         width: MediaQuery.of(context).size.width,
-                          child: Image.network('https://picsum.photos/300/300', fit: BoxFit.fill,)
+                          child: TransitionToImage(
+                            image: AdvancedNetworkImage(
+                              'https://picsum.photos/300/300',
+                              loadedCallback: () => print('Network Image loaded.'),
+                              loadFailedCallback: () => print('Oh, no! Image failed!'),
+                              timeoutDuration: Duration(seconds: 30),
+                              retryLimit: 2,
+                            ),
+                          )
                       ),
                       Positioned(
                         top: 0,
