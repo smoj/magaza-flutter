@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_networkimage/provider.dart';
+import 'package:flutter_advanced_networkimage/transition.dart';
+import 'package:flutter_advanced_networkimage/zoomable.dart';
 
 class FeedItem extends StatelessWidget {
   final String imageUrl;
@@ -13,13 +16,20 @@ class FeedItem extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
+          constraints: BoxConstraints(
+            minHeight: 300
+          ),
           width: MediaQuery.of(context).size.width,
-          child: FittedBox(
-            child: FadeInImage(
-              image: NetworkImage(this.imageUrl),
-              placeholder: AssetImage('assets/loading.gif'),
+          child: TransitionToImage(
+            image: AdvancedNetworkImage(
+              this.imageUrl,
+              loadedCallback: () => print('It works!'),
+              loadFailedCallback: () => print('Oh, no!'),
+              timeoutDuration: Duration(seconds: 30),
+              retryLimit: 1,
             ),
             fit: BoxFit.fitWidth,
+            enableRefresh: true,
           ),
         ),
         Positioned(
