@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:magaza_flutter/magaza_ui/single-widgets.dart';
 import 'package:magaza_flutter/magaza_ui/screens/sidemenu.dart';
-import 'dart:io';
+import 'package:flutter/services.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -14,15 +14,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text('Are you sure?'),
-          content: Text('Do you want to exit an App'),
+          title: Text('Exit?'),
+          content: Text('Do you want to exit the app?'),
           actions: <Widget>[
             FlatButton(
               onPressed: () => Navigator.of(context).pop(false),
               child: Text('No'),
             ),
             FlatButton(
-              onPressed: () => exit(0),
+              onPressed: () => Navigator.of(context).pop(true),
               /*Navigator.of(context).pop(true)*/
               child: Text('Yes'),
             ),

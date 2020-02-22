@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_networkimage/provider.dart';
 import 'package:flutter_advanced_networkimage/transition.dart';
+import 'dart:math';
 
 class FeedItem extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String timestamp;
   final String category;
+
+  final selectColors = [
+    Colors.blue,
+    Colors.red,
+    Colors.green,
+    Colors.orange,
+    Colors.blue.shade800,
+    Colors.pink.shade700,
+    Colors.grey.shade700
+  ];
 
   FeedItem({this.imageUrl, this.title, this.timestamp, this.category});
 
@@ -15,6 +26,7 @@ class FeedItem extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
+          color: selectColors[Random().nextInt(selectColors.length)],
           constraints: BoxConstraints(
             minHeight: 200
           ),
@@ -63,7 +75,7 @@ class FeedItem extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
             child: RotatedBox(
               quarterTurns: 3,
-              child: Text('MUSIC', style: TextStyle(
+              child: Text(this.category.toUpperCase(), style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Montserrat',
                   fontSize: 10,
