@@ -46,7 +46,7 @@ class SideMenuScreen extends StatelessWidget {
                   SizedBox(height: 30,),
                   Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
                   ListTile(
-                      title: Text('Favourited', style: TextStyle(
+                      title: Text('Favourites', style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Montserrat',
@@ -83,19 +83,6 @@ class SideMenuScreen extends StatelessWidget {
                     onTap: (){
                       Navigator.pushNamed(context, '/');
                     },
-                  ),
-                  Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
-                  ListTile(
-                    onTap: (){
-                      Navigator.pushNamed(context, '/login');
-                    },
-                    title: Text('Login/Register', style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: 'Montserrat',
-                        fontSize: 18
-                    ),),
-                    leading: Icon(Icons.branding_watermark, color: Colors.white,),
                   ),
                   Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
                   ListTile(
