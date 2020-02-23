@@ -37,13 +37,13 @@ class SearchScreen extends StatelessWidget {
                   color: Color.fromRGBO(255, 255, 255, 0.34),
                   padding: EdgeInsets.symmetric(vertical: 0, horizontal: 15),
                   child: TextField(
-                    controller: TextEditingController(text: 'aries@hades.com'),
+                    controller: TextEditingController(text: 'search query'),
                     style: TextStyle(
                         color: Colors.white
                     ),
                     decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: 'Your username',
+                        hintText: 'Search query',
                         hintStyle: TextStyle(
                             color: Color.fromRGBO(255, 255, 255, 0.8),
                             fontFamily: 'Montserrat',
@@ -66,7 +66,7 @@ class SearchScreen extends StatelessWidget {
               ArticleItem(
                 title: 'A new perspective with UI in android/iOS with flutter',
                 tag: 'Technology',
-                url: 'https://picsum.photos/231/197',
+                url: 'https://i.picsum.photos/id/420/231/197.jpg',
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),
@@ -75,7 +75,7 @@ class SearchScreen extends StatelessWidget {
               ArticleItem(
                 title: 'A new perspective with UI in android/iOS with flutter',
                 tag: 'Technology',
-                url: 'https://picsum.photos/231/197',
+                url: 'https://i.picsum.photos/id/232/231/197.jpg',
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),

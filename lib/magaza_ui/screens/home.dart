@@ -97,7 +97,43 @@ class _HomeScreenState extends State<HomeScreen> {
                         category: 'LIFE',
                         imageUrl: 'https://i.picsum.photos/id/974/400/300.jpg',
                       ),
-                    )
+                    ),
+                    FlatButton(
+                      padding: EdgeInsets.zero,
+                      onPressed: (){
+                        Navigator.pushNamed(context, '/detail');
+                      },
+                      child: FeedItem(
+                        title: 'Other choice',
+                        timestamp: '5 Mins ago',
+                        category: 'LIFE',
+                        imageUrl: 'https://i.picsum.photos/id/970/400/300.jpg',
+                      ),
+                    ),
+                    FlatButton(
+                      padding: EdgeInsets.zero,
+                      onPressed: (){
+                        Navigator.pushNamed(context, '/detail');
+                      },
+                      child: FeedItem(
+                        title: 'Silent Muse',
+                        timestamp: '5 Mins ago',
+                        category: 'LIFE',
+                        imageUrl: 'https://i.picsum.photos/id/670/400/300.jpg',
+                      ),
+                    ),
+                    FlatButton(
+                      padding: EdgeInsets.zero,
+                      onPressed: (){
+                        Navigator.pushNamed(context, '/detail');
+                      },
+                      child: FeedItem(
+                        title: 'Phatom tide',
+                        timestamp: '5 Mins ago',
+                        category: 'LIFE',
+                        imageUrl: 'https://i.picsum.photos/id/345/400/300.jpg',
+                      ),
+                    ),
                   ],
                 )
             ),
