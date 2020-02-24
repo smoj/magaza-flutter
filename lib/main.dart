@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:magaza_flutter/magaza_ui/screens/forgot.dart';
+import 'package:magaza_flutter/magaza_ui/screens/intro_slider.dart';
 import 'package:magaza_flutter/magaza_ui/widgets/feed-item.dart';
 import 'package:magaza_flutter/magaza_ui/screens/auth_tab.dart';
 import 'package:magaza_flutter/magaza_ui/screens/detail.dart';
@@ -22,13 +23,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
+      initialRoute: '/slider',
       routes: {
         '/' : (context) => HomeScreen(),
         '/detail' : (context) => DetailScreen(),
         '/login' : (context) => AuthTabScreen(),
         '/search' : (context) => SearchScreen(),
-        '/forgot' : (context) => ForgotScreen()
+        '/forgot' : (context) => ForgotScreen(),
+        '/slider' : (context) => IntroSliderScreen()
       },
       debugShowCheckedModeBanner: false,
     );
