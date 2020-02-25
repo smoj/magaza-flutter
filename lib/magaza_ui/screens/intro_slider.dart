@@ -19,6 +19,8 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
       Navigator.pushNamed(context, '/');
     }
   }
+
+//  Change/Add as many slides are you need
   List<SlideMeta> pageSlides = [
     SlideMeta(
         title: 'First Title',
@@ -48,7 +50,7 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
   @override
   void initState(){
     super.initState();
-    // set the itemCount to lenght of pageSlide Array
+    // sets the itemCount to lenght of pageSlide Array
     slider = TransformerPageController( itemCount: pageSlides.length);
   }
 
@@ -67,7 +69,7 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text("Slide number $index", style: TextStyle(
+                          Text(pageSlides[index].title, style: TextStyle(
                               color: Colors.black,
                               fontFamily: 'Yrsa',
                               fontWeight: FontWeight.w600,
