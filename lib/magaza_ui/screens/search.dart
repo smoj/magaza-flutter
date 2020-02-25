@@ -7,6 +7,7 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromRGBO(55, 55, 55, 1),
       appBar: AppBar(
+        brightness: Brightness.light,
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(
             color: Colors.black

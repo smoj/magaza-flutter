@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.white,
           drawer: SideMenuScreen(),
           appBar: AppBar(
+            brightness: Brightness.light,
             actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.search),

@@ -5,6 +5,7 @@ class ForgotScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        brightness: Brightness.light,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: (){

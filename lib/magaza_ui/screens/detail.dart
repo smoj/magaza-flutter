@@ -11,6 +11,7 @@ class DetailScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         drawer: SideMenuScreen(),
         appBar: AppBar(
+          brightness: Brightness.light,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: (){

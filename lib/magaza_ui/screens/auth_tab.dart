@@ -10,6 +10,7 @@ class AuthTabScreen extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          brightness: Brightness.light,
           backgroundColor: Colors.white,
           iconTheme: IconThemeData(
               color: Colors.black
