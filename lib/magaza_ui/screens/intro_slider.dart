@@ -145,7 +145,7 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
 //                              print('nextPage: index is $index');
                               if(index >= pageSlides.length-1){
                                 // last slide already reached. go to home
-                                Navigator.pushNamed(context, '/');
+                                Navigator.pushNamed(context, '/login');
                               }
 //                              if(((pageSlides.length-1) - index) <= 1){
 //                                print('Last slide detected');

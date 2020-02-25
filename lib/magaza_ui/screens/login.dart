@@ -95,7 +95,7 @@ class LoginScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                         splashColor: Colors.blueAccent,
                         onPressed: () {
-                          /*...*/
+                          Navigator.of(context).pushNamed('/');
                         },
                         child: Text(
                           "Login with Email",
