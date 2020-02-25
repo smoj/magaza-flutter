@@ -55,28 +55,46 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 40,),
-              ArticleItem(
-                title: 'A new perspective with UI in android/iOS with flutter',
-                tag: 'Technology',
-                url: 'https://picsum.photos/231/197',
+              FlatButton(
+                padding: EdgeInsets.zero,
+                onPressed: (){
+                  Navigator.pushNamed(context, '/detail');
+                },
+                child: ArticleItem(
+                  title: 'A new perspective with UI in android/iOS with flutter',
+                  tag: 'Technology',
+                  url: 'https://i.picsum.photos/id/866/231/197.jpg',
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),
                 child: Divider( color: Colors.white, height: 1,),
               ),
-              ArticleItem(
-                title: 'A new perspective with UI in android/iOS with flutter',
-                tag: 'Technology',
-                url: 'https://i.picsum.photos/id/420/231/197.jpg',
+              FlatButton(
+                padding: EdgeInsets.zero,
+                onPressed: (){
+                  Navigator.pushNamed(context, '/detail');
+                },
+                child: ArticleItem(
+                  title: 'A different take on things',
+                  tag: 'Other',
+                  url: 'https://i.picsum.photos/id/259/231/197.jpg',
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),
                 child: Divider( color: Colors.white, height: 1,),
               ),
-              ArticleItem(
-                title: 'A new perspective with UI in android/iOS with flutter',
-                tag: 'Technology',
-                url: 'https://i.picsum.photos/id/232/231/197.jpg',
+              FlatButton(
+                padding: EdgeInsets.zero,
+                onPressed: (){
+                  Navigator.pushNamed(context, '/detail');
+                },
+                child: ArticleItem(
+                  title: 'Moving on: A different take on reconciliation',
+                  tag: 'Other',
+                  url: 'https://i.picsum.photos/id/139/231/197.jpg',
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),
