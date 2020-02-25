@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Text('No'),
             ),
             FlatButton(
-              onPressed: () => Navigator.of(context).pop(true),
+              onPressed: () => SystemChannels.platform.invokeMethod('SystemNavigator.pop'),
               /*Navigator.of(context).pop(true)*/
               child: Text('Yes'),
             ),

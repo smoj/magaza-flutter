@@ -22,11 +22,9 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
 
   changeWording(int index){
     print('index: '+index.toString()+', pageSlides.lenght is'+pageSlides.length.toString());
-    if(index == (pageSlides.length-1)){
-      setState(() {
-        nextText = 'Done';
-      });
-    }
+//    if(index == (pageSlides.length-1)){
+//      nextText = 'Done';
+//    }
   }
 
 //  Change/Add as many slides are you need
@@ -66,6 +64,9 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
   Widget build(BuildContext context) {
     return new TransformerPageView(
         loop: true,
+//        onPageChanged: (index){
+//          changeWording(index);
+//        },
         pageController: slider,
         itemBuilder: (BuildContext context, int index) {
           return Container(
@@ -92,7 +93,7 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
                             SizedBox(height: 12,),
                             Text(pageSlides[index].message, style: TextStyle(
                                 color: pageSlides[index].textColor,
-                                fontSize: 20,
+                                fontSize: 18,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w300,
                                 decoration: TextDecoration.none
@@ -130,9 +131,7 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
                           child: FlatButton(
                             child: Text("$prevText"),
                             onPressed: (){
-                              setState(() {
-                                slider.previousPage(duration: Duration(seconds: 1), curve: Cubic(0.25, 0.1, 0.25, 1.0));
-                              });
+                              slider.previousPage(duration: Duration(milliseconds: 500), curve: Curves.ease);
                             },
                           ),
                           flex: 1,
@@ -143,9 +142,16 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
                           child: FlatButton(
                             child: Text("$nextText"),
                             onPressed: (){
-                              setState(() {
-                                slider.nextPage(duration: Duration(seconds: 1), curve: Cubic(0.25, 0.1, 0.25, 1.0));
-                              });
+//                              print('nextPage: index is $index');
+                              if(index >= pageSlides.length-1){
+                                // last slide already reached. go to home
+                                Navigator.pushNamed(context, '/');
+                              }
+//                              if(((pageSlides.length-1) - index) <= 1){
+//                                print('Last slide detected');
+//                                nextText = 'Done';
+//                              }
+                              slider.nextPage(duration: Duration(milliseconds: 500), curve: Curves.ease);
                             },
                           ),
                           flex: 1,
