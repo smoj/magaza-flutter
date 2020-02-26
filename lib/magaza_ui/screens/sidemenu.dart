@@ -127,6 +127,24 @@ class SideMenuScreen extends StatelessWidget {
                         fontFamily: 'Montserrat',
                         fontSize: 18
                     ),),
+                    onTap: (){
+                      return showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: Text('Want to logout?'),
+                          actions: <Widget>[
+                            FlatButton(
+                              onPressed: () => Navigator.of(context).pop(false),
+                              child: Text('No'),
+                            ),
+                            FlatButton(
+                              onPressed: () => Navigator.pushNamedAndRemoveUntil(context, '/login', (_) => false),
+                              child: Text('Yes'),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                     leading: Icon(Icons.exit_to_app, color: Colors.white,),
                   ),
                 ],
