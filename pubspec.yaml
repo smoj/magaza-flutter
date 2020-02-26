@@ -19,7 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_advanced_networkimage: 0.5.0
+  flutter_advanced_networkimage: 0.7.0
   transformer_page_view: ^0.1.6
 
   # The following adds the Cupertino Icons font to your application.
