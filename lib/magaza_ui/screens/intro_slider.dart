@@ -30,7 +30,7 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
 //  Change/Add as many slides are you need
   List<SlideMeta> pageSlides = [
     SlideMeta(
-        title: 'Welcome to Magaza',
+        title: 'Welcome to Magazax',
         message: 'A news app for iOS & Android built entirely in flutter',
         backgroundColor: Colors.white,
         textColor: Colors.black,
@@ -69,98 +69,101 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
 //        },
         pageController: slider,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-              color: pageSlides[index].backgroundColor,
+          return Scaffold(
+            body: SafeArea(
               child: Stack(
                 children: <Widget>[
-                  Positioned(
-                      top: 464,
-                      left: 32,
-                      child: Container(
-                        width: MediaQuery.of(context).size.width*0.9,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            SizedBox(height: 10,),
-                            Text(pageSlides[index].title, style: TextStyle(
-                                color: Colors.black,
-                                fontFamily: 'Yrsa',
-                                fontWeight: FontWeight.w600,
-                                fontSize: 36,
-                                height: 0.8,
-                                decoration: TextDecoration.none
-                            ),),
-                            SizedBox(height: 12,),
-                            Text(pageSlides[index].message, style: TextStyle(
-                                color: pageSlides[index].textColor,
-                                fontSize: 18,
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.w300,
-                                decoration: TextDecoration.none
-                            ),)
-                          ],
-                        ),
-                      )
-                  ),
                   Container(
+                    height: MediaQuery.of(context).size.height * 0.6,
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(pageSlides[index].backgroundImage),
-                            fit: BoxFit.cover
-                        )
+                      image: DecorationImage(
+                        image: AssetImage(pageSlides[index].backgroundImage),
+                        fit: BoxFit.fitHeight
+                      )
                     ),
-                    height: 400,
-                    width: MediaQuery.of(context).size.width,
                   ),
-                  Positioned(
-                    top: 358,
-                    left: 18,
+                  Align(
+                    alignment: Alignment(0,1),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      color: Colors.green,
+                      height: MediaQuery.of(context).size.height * 0.4,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Spacer(),
+                          Text(pageSlides[index].title, style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: 'Yrsa',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 36,
+                              height: 0.8,
+                              decoration: TextDecoration.none
+                          ),),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(pageSlides[index].message, style: TextStyle(
+                              color: pageSlides[index].textColor,
+                              fontSize: 18,
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.w300,
+                              decoration: TextDecoration.none
+                          ),),
+                          Spacer()
+                        ],
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-0.8, 0.15),
                     child: Container(
                       width: 96,
                       height: 96,
-                      child: Image.asset('assets/magaza/logo.png', fit: BoxFit.fitWidth,),
+                      child: Container(
+                        width: 96,
+                        height: 96,
+                        child: Image.asset('assets/magaza/logo.png', fit: BoxFit.fitWidth,),
+                      ),
                     ),
                   ),
                   Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    child: Row(
-                      children: <Widget>[
-                        Expanded(
-                          child: FlatButton(
-                            child: Text("$prevText"),
-                            onPressed: (){
-                              slider.previousPage(duration: Duration(milliseconds: 500), curve: Curves.ease);
-                            },
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: FlatButton(
+                              child: Text("$prevText"),
+                              onPressed: (){
+                                slider.previousPage(duration: Duration(milliseconds: 500), curve: Curves.ease);
+                              },
+                            ),
+                            flex: 1,
                           ),
-                          flex: 1,
-                        ),
-                        Spacer(),
-                        Spacer(),
-                        Expanded(
-                          child: FlatButton(
-                            child: Text("$nextText"),
-                            onPressed: (){
-//                              print('nextPage: index is $index');
-                              if(index >= pageSlides.length-1){
-                                // last slide already reached. go to home
-                                Navigator.pushNamed(context, '/login');
-                              }
-//                              if(((pageSlides.length-1) - index) <= 1){
-//                                print('Last slide detected');
-//                                nextText = 'Done';
-//                              }
-                              slider.nextPage(duration: Duration(milliseconds: 500), curve: Curves.ease);
-                            },
+                          Spacer(),
+                          Spacer(),
+                          Expanded(
+                            child: FlatButton(
+                              child: Text("$nextText"),
+                              onPressed: (){
+
+                                if(index >= pageSlides.length-1){
+                                  // last slide already reached. go to home
+                                  Navigator.pushNamed(context, '/login');
+                                }
+                                slider.nextPage(duration: Duration(milliseconds: 500), curve: Curves.ease);
+                              },
+                            ),
+                            flex: 1,
                           ),
-                          flex: 1,
-                        ),
-                      ],
-                    )
+                        ],
+                      )
                   )
                 ],
               )
+            ),
           );
         },
         itemCount: pageSlides.length);
