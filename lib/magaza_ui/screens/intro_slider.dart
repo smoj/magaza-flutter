@@ -30,22 +30,22 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
 //  Change/Add as many slides are you need
   List<SlideMeta> pageSlides = [
     SlideMeta(
-        title: 'Welcome to Magazax',
-        message: 'A news app for iOS & Android built entirely in flutter',
+        title: 'Magazine UI',
+        message: 'A Flutter news app for iOS and Android',
         backgroundColor: Colors.red,
         textColor: Colors.white,
         backgroundImage: 'assets/magaza/slider1.png'
     ),
     SlideMeta(
-        title: 'Beautiful custom screens',
-        message: 'Based on a custom UI Kit for news apps',
+        title: 'Custom UI Design for News Apps',
+        message: 'Complete with feed, detail, and other screens',
         backgroundColor: Colors.blue.shade500,
         textColor: Colors.white,
         backgroundImage: 'assets/magaza/slider2.png'
     ),
     SlideMeta(
-        title: 'Thoroughly Tested. Up to date',
-        message: 'By the FlutterMarket, across iOS/Android devices on flutter 1.12.x',
+        title: 'Kickstart your app development',
+        message: 'Focus on building your app, not designing it',
         backgroundColor: Colors.white,
         textColor: Colors.black,
         backgroundImage: 'assets/magaza/slider3.png'
