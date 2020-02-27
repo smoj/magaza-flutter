@@ -32,15 +32,15 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
     SlideMeta(
         title: 'Welcome to Magazax',
         message: 'A news app for iOS & Android built entirely in flutter',
-        backgroundColor: Colors.white,
-        textColor: Colors.black,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
         backgroundImage: 'assets/magaza/slider1.png'
     ),
     SlideMeta(
         title: 'Beautiful custom screens',
         message: 'Based on a custom UI Kit for news apps',
-        backgroundColor: Colors.white,
-        textColor: Colors.black,
+        backgroundColor: Colors.blue.shade500,
+        textColor: Colors.white,
         backgroundImage: 'assets/magaza/slider2.png'
     ),
     SlideMeta(
@@ -85,33 +85,39 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
                   Align(
                     alignment: Alignment(0,1),
                     child: Container(
+//                      padding: EdgeInsets.symmetric(horizontal: 20),
                       width: MediaQuery.of(context).size.width,
-                      color: Colors.green,
+                      color: pageSlides[index].backgroundColor,
                       height: MediaQuery.of(context).size.height * 0.4,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Spacer(),
-                          Text(pageSlides[index].title, style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: 'Yrsa',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 36,
-                              height: 0.8,
-                              decoration: TextDecoration.none
-                          ),),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(pageSlides[index].message, style: TextStyle(
-                              color: pageSlides[index].textColor,
-                              fontSize: 18,
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w300,
-                              decoration: TextDecoration.none
-                          ),),
-                          Spacer()
-                        ],
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.4,
+                        width: MediaQuery.of(context).size.width * 0.7,
+                        padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.1),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Spacer(),
+                            Text(pageSlides[index].title, style: TextStyle(
+                                color: pageSlides[index].textColor,
+                                fontFamily: 'Yrsa',
+                                fontWeight: FontWeight.w600,
+                                fontSize: MediaQuery.of(context).size.height * 0.05,
+                                height: 0.9,
+                                decoration: TextDecoration.none
+                            ),),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(pageSlides[index].message, style: TextStyle(
+                                color: pageSlides[index].textColor,
+                                fontSize: MediaQuery.of(context).size.height * 0.024,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w300,
+                                decoration: TextDecoration.none
+                            ),),
+                            Spacer()
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -135,7 +141,11 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
                         children: <Widget>[
                           Expanded(
                             child: FlatButton(
-                              child: Text("$prevText"),
+                              child: Text("$prevText", style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.w300,
+                                  color: pageSlides[index].textColor
+                              ),),
                               onPressed: (){
                                 slider.previousPage(duration: Duration(milliseconds: 500), curve: Curves.ease);
                               },
@@ -146,7 +156,11 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
                           Spacer(),
                           Expanded(
                             child: FlatButton(
-                              child: Text("$nextText"),
+                              child: Text("$nextText", style: TextStyle(
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w300,
+                                color: pageSlides[index].textColor
+                              ),),
                               onPressed: (){
 
                                 if(index >= pageSlides.length-1){
