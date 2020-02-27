@@ -10,7 +10,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState(){
     super.initState();
-//    Timer(Duration(seconds: 3), ()=> Navigator.of(context).pushNamed('/slider'));
+    Timer(Duration(seconds: 6), ()=> Navigator.of(context).pushNamed('/slider'));
   }
 
   Widget build(BuildContext context) {
@@ -43,9 +43,10 @@ class _SplashScreenState extends State<SplashScreen> {
                     )
                 ),
                 child: Container(
-                  alignment: Alignment.center,
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  alignment: Alignment(0,0),
                   color: Colors.white,
-                  height: 180,
+                  height: MediaQuery.of(context).size.height * 0.25,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -58,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
                           decoration: TextDecoration.none
                       ),),
                       SizedBox(height: 7,),
-                      Text('Flutter News App for iOS and Android', style: TextStyle(
+                      Text('Flutter News App for iOS and Android', textAlign: TextAlign.center, style: TextStyle(
                           fontSize: MediaQuery.of(context).size.height * 0.024,
                           fontFamily: 'Montserrat',
                           fontWeight: FontWeight.w300,
