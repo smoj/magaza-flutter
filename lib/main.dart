@@ -9,6 +9,7 @@ import 'package:magaza_flutter/magaza_ui/screens/home.dart';
 import 'package:magaza_flutter/magaza_ui/screens/login.dart';
 import 'package:magaza_flutter/magaza_ui/screens/sidemenu.dart';
 import 'package:magaza_flutter/magaza_ui/screens/search.dart';
+import 'package:magaza_flutter/magaza_ui/screens/splash.dart';
 import 'package:flutter/services.dart';
 
 void main() async{
@@ -23,14 +24,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/slider',
+      initialRoute: '/splash',
       routes: {
+        '/splash' : (context) => SplashScreen(),
         '/' : (context) => HomeScreen(),
         '/detail' : (context) => DetailScreen(),
         '/login' : (context) => AuthTabScreen(),
         '/search' : (context) => SearchScreen(),
         '/forgot' : (context) => ForgotScreen(),
-        '/slider' : (context) => IntroSliderScreen()
+        '/slider' : (context) => IntroSliderScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
