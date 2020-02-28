@@ -52,6 +52,9 @@ class SideMenuScreen extends StatelessWidget {
                           fontFamily: 'Montserrat',
                           fontSize: 18
                       ),),
+                      onTap: (){
+                        Navigator.pushNamed(context, '/favourite');
+                      },
                       leading: Icon(Icons.favorite, color: Colors.white,),
                       trailing: Container(
                           padding: EdgeInsets.fromLTRB(0, 5, 0, 0),

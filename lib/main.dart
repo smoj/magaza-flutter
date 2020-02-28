@@ -10,6 +10,7 @@ import 'package:magaza_flutter/magaza_ui/screens/login.dart';
 import 'package:magaza_flutter/magaza_ui/screens/sidemenu.dart';
 import 'package:magaza_flutter/magaza_ui/screens/search.dart';
 import 'package:magaza_flutter/magaza_ui/screens/splash.dart';
+import 'package:magaza_flutter/magaza_ui/screens/favourite.dart';
 import 'package:flutter/services.dart';
 
 void main() async{
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/search' : (context) => SearchScreen(),
         '/forgot' : (context) => ForgotScreen(),
         '/slider' : (context) => IntroSliderScreen(),
+        '/favourite' : (context) => FavouriteScreen()
       },
       debugShowCheckedModeBanner: false,
     );
