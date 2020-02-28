@@ -81,7 +81,7 @@ class SideMenuScreen extends StatelessWidget {
                     ),),
                     leading: Icon(Icons.music_note, color: Colors.white,),
                     onTap: (){
-                      Navigator.pushNamed(context, '/');
+                      Navigator.pushNamed(context, '/home');
                     },
                   ),
                   Divider( height: 1, color: Color.fromRGBO(51, 50, 50, 1)),
