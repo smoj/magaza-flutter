@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         title: 'Himalayas',
                         timestamp: '23 Mins ago',
                         category: 'SOCIAL',
-                        imageUrl: 'https://i.picsum.photos/id/866/300/400.jpg',
+                        imageUrl: 'https://i.picsum.photos/id/866/300/200.jpg',
                         special: true,
                       ),
                     ),
