@@ -29,7 +29,7 @@ class FeedItem extends StatelessWidget {
         Container(
           color: selectColors[Random().nextInt(selectColors.length)],
           constraints: BoxConstraints(
-            minHeight: 200
+            minHeight: 150
           ),
           width: MediaQuery.of(context).size.width,
           child: TransitionToImage(

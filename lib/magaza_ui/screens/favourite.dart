@@ -17,10 +17,10 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
           onPressed: () => gotoDetail(),
           child: Text('View Article'),
         ),
-        FlatButton(
-          onPressed: () => deleteItem(),
-          child: Text('Delete'),
-        ),
+//        FlatButton(
+//          onPressed: () => deleteItem(),
+//          child: Text('Delete'),
+//        ),
       ],
     );
   }
