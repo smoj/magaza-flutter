@@ -8,6 +8,7 @@ class FeedItem extends StatelessWidget {
   final String title;
   final String timestamp;
   final String category;
+  bool special = false;
 
   final selectColors = [
     Colors.blue,
@@ -19,7 +20,7 @@ class FeedItem extends StatelessWidget {
     Colors.grey.shade700
   ];
 
-  FeedItem({this.imageUrl, this.title, this.timestamp, this.category});
+  FeedItem({this.imageUrl, this.title, this.timestamp, this.category, this.special});
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +53,21 @@ class FeedItem extends StatelessWidget {
             color: Color.fromRGBO(0, 0, 0, 0.3),
             height: 400,
           ),
+        ),
+        Align(
+          alignment: Alignment.topRight,
+          child: (this.special) ? Container(
+            margin: EdgeInsets.only(top: 10),
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            color: Colors.red,
+            child: Text('Special'.toUpperCase(), style: TextStyle(
+              color: Colors.white,
+              fontFamily: 'Montserrat',
+              fontSize: 13,
+              letterSpacing: 6,
+              fontWeight: FontWeight.bold,
+            ),),
+          ) : null,
         ),
         Positioned(
           bottom: 0,

@@ -66,13 +66,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     FlatButton(
                       padding: EdgeInsets.zero,
                       onPressed: (){
-                        Navigator.pushNamed(context, '/detail');
+                        Navigator.pushNamed(context, '/story-highlight');
                       },
                       child: FeedItem(
                         title: 'Himalayas',
                         timestamp: '23 Mins ago',
                         category: 'SOCIAL',
                         imageUrl: 'https://i.picsum.photos/id/866/300/400.jpg',
+                        special: true,
                       ),
                     ),
                     FlatButton(
@@ -85,6 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         timestamp: '11 Mins ago',
                         category: 'TRAVEL',
                         imageUrl: 'https://i.picsum.photos/id/372/400/200.jpg',
+                        special: false,
                       ),
                     ),
                     FlatButton(
@@ -97,6 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         timestamp: '5 Mins ago',
                         category: 'LIFE',
                         imageUrl: 'https://i.picsum.photos/id/974/400/300.jpg',
+                        special: false,
                       ),
                     ),
                     FlatButton(
@@ -109,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         timestamp: '5 Mins ago',
                         category: 'LIFE',
                         imageUrl: 'https://i.picsum.photos/id/970/400/300.jpg',
+                        special: false,
                       ),
                     ),
                     FlatButton(
@@ -121,6 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         timestamp: '5 Mins ago',
                         category: 'LIFE',
                         imageUrl: 'https://i.picsum.photos/id/670/400/300.jpg',
+                        special: false,
                       ),
                     ),
                     FlatButton(
@@ -133,6 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         timestamp: '5 Mins ago',
                         category: 'LIFE',
                         imageUrl: 'https://i.picsum.photos/id/345/400/300.jpg',
+                        special: false,
                       ),
                     ),
                   ],

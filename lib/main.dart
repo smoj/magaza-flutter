@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:magaza_flutter/magaza_ui/screens/forgot.dart';
 import 'package:magaza_flutter/magaza_ui/screens/intro_slider.dart';
-import 'package:magaza_flutter/magaza_ui/widgets/feed-item.dart';
 import 'package:magaza_flutter/magaza_ui/screens/auth_tab.dart';
 import 'package:magaza_flutter/magaza_ui/screens/detail.dart';
 import 'package:magaza_flutter/magaza_ui/screens/home.dart';
-import 'package:magaza_flutter/magaza_ui/screens/login.dart';
-import 'package:magaza_flutter/magaza_ui/screens/sidemenu.dart';
 import 'package:magaza_flutter/magaza_ui/screens/search.dart';
 import 'package:magaza_flutter/magaza_ui/screens/splash.dart';
 import 'package:magaza_flutter/magaza_ui/screens/favourite.dart';
-import 'package:flutter/services.dart';
+import 'package:magaza_flutter/magaza_ui/screens/story_highlight.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +31,8 @@ class MyApp extends StatelessWidget {
         '/search' : (context) => SearchScreen(),
         '/forgot' : (context) => ForgotScreen(),
         '/slider' : (context) => IntroSliderScreen(),
-        '/favourite' : (context) => FavouriteScreen()
+        '/favourite' : (context) => FavouriteScreen(),
+        '/story-highlight' : (context) => StoryHighlight()
       },
       debugShowCheckedModeBanner: false,
     );
