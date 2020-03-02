@@ -13,7 +13,7 @@ class ArticleItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -36,24 +36,24 @@ class ArticleItem extends StatelessWidget {
           Expanded(
             flex: 9,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.fromLTRB(18, 15, 15, 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(this.tag.toUpperCase(), style: TextStyle(
-                      fontSize: 13.0,
+                      fontSize: MediaQuery.of(context).size.width * 0.03,
                       color: Colors.white,
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.w600,
-                      height: 0
+                      height: 1
                   ),),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 5,),
                   Text(
                     this.title,
                     overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
+                    maxLines: 1,
                     style: TextStyle(
-                        fontSize: 25.0,
+                        fontSize: MediaQuery.of(context).size.width * 0.065,
                         color: Colors.white,
                         fontFamily: 'Yrsa',
                         fontWeight: FontWeight.w600,

@@ -9,6 +9,7 @@ import 'package:magaza_flutter/magaza_ui/screens/search.dart';
 import 'package:magaza_flutter/magaza_ui/screens/splash.dart';
 import 'package:magaza_flutter/magaza_ui/screens/favourite.dart';
 import 'package:magaza_flutter/magaza_ui/screens/story_highlight.dart';
+import 'package:magaza_flutter/magaza_ui/screens/profile.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         '/forgot' : (context) => ForgotScreen(),
         '/slider' : (context) => IntroSliderScreen(),
         '/favourite' : (context) => FavouriteScreen(),
-        '/story-highlight' : (context) => StoryHighlight()
+        '/story-highlight' : (context) => StoryHighlight(),
+        '/profile' : (context) => ProfileScreen()
       },
       debugShowCheckedModeBanner: false,
     );

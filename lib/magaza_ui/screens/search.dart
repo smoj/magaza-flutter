@@ -26,19 +26,11 @@ class SearchScreen extends StatelessWidget {
               SizedBox(height: 20,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                child: Text('Search Results', textAlign: TextAlign.left, style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Montserrat',
-                  fontSize: 24
-                ),),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Container(
                   color: Color.fromRGBO(255, 255, 255, 0.34),
                   padding: EdgeInsets.symmetric(vertical: 0, horizontal: 15),
                   child: TextField(
-                    controller: TextEditingController(text: 'search query'),
+                    controller: TextEditingController(text: ''),
                     style: TextStyle(
                         color: Colors.white
                     ),
@@ -54,7 +46,20 @@ class SearchScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 40,),
+              Container(
+                margin: EdgeInsets.only(top: 13),
+                width: MediaQuery.of(context).size.width,
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                color: Color.fromRGBO(0, 0, 0, 0.6),
+                child: Text('Search Results'.toUpperCase(), textAlign: TextAlign.left, style: TextStyle(
+                    fontFamily: 'Montserrat',
+                    color: Colors.white,
+                    fontSize: 13,
+                    letterSpacing: 8,
+                    fontWeight: FontWeight.bold
+                ),),
+              ),
+              SizedBox(height: 0,),
               FlatButton(
                 padding: EdgeInsets.zero,
                 onPressed: (){
@@ -66,10 +71,7 @@ class SearchScreen extends StatelessWidget {
                   url: 'https://i.picsum.photos/id/866/231/197.jpg',
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),
-                child: Divider( color: Colors.white, height: 1,),
-              ),
+              Divider( color: Colors.white, height: 1,),
               FlatButton(
                 padding: EdgeInsets.zero,
                 onPressed: (){
@@ -81,10 +83,7 @@ class SearchScreen extends StatelessWidget {
                   url: 'https://i.picsum.photos/id/259/231/197.jpg',
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),
-                child: Divider( color: Colors.white, height: 1,),
-              ),
+              Divider( color: Colors.white, height: 1,),
               FlatButton(
                 padding: EdgeInsets.zero,
                 onPressed: (){
@@ -96,10 +95,7 @@ class SearchScreen extends StatelessWidget {
                   url: 'https://i.picsum.photos/id/139/231/197.jpg',
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),
-                child: Divider( color: Colors.white, height: 1,),
-              ),
+              Divider( color: Colors.white, height: 1,),
             ],
           ),
         ),

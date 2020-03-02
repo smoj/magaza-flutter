@@ -70,7 +70,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 color: Color.fromRGBO(229, 229, 229, 1),
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 child: Text('Saved Articles'.toUpperCase(), textAlign: TextAlign.left, style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 13,

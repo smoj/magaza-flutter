@@ -12,7 +12,7 @@ class FavouriteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -38,19 +38,20 @@ class FavouriteItem extends StatelessWidget {
               Expanded(
                 flex: 9,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(18, 0, 18, 0),
+                  padding: const EdgeInsets.fromLTRB(18, 14, 18, 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
                         this.title,
                         overflow: TextOverflow.ellipsis,
-                        maxLines: 3,
+                        maxLines: 2,
                         style: TextStyle(
-                          fontSize: 25.0,
+                          fontSize: MediaQuery.of(context).size.width * 0.065,
                           color: Colors.black,
                           fontFamily: 'Yrsa',
                           fontWeight: FontWeight.w700,
+                          height: 1
                         ),),
                     ],
                   ),
