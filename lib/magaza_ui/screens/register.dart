@@ -35,7 +35,7 @@ class RegisterScreen extends StatelessWidget {
               Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 0),
                   child: TextField(
-                    controller: TextEditingController(text: 'aries@hades.com'),
+                    controller: TextEditingController(text: ''),
                     style: TextStyle(
                         color: Colors.white
                     ),
@@ -45,9 +45,34 @@ class RegisterScreen extends StatelessWidget {
                             color: Colors.white
                         ),
                         border: InputBorder.none,
-                        hintText: 'Your username',
+                        hintText: 'email@shades.com',
                         hintStyle: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 0.8),
+                            color: Color.fromRGBO(255, 255, 255, 0.4),
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w700
+                        )
+                    ),
+                  )
+              ),
+              Divider(
+                color: Colors.white,
+              ),
+              Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 0),
+                  child: TextField(
+                    controller: TextEditingController(text: ''),
+                    style: TextStyle(
+                        color: Colors.white
+                    ),
+                    decoration: InputDecoration(
+                        labelText: 'Phone Number',
+                        labelStyle: TextStyle(
+                            color: Colors.white
+                        ),
+                        border: InputBorder.none,
+                        hintText: '050 3883 0388',
+                        hintStyle: TextStyle(
+                            color: Color.fromRGBO(255, 255, 255, 0.4),
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.w700
                         )
@@ -81,6 +106,30 @@ class RegisterScreen extends StatelessWidget {
               Divider(
                 color: Colors.white,
               ),
+              Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 0),
+                  child: TextField(
+                    style: TextStyle(
+                        color: Colors.white
+                    ),
+                    decoration: InputDecoration(
+                        labelText: 'Confirm Password',
+                        labelStyle: TextStyle(
+                            color: Colors.white
+                        ),
+                        border: InputBorder.none,
+                        hintText: 'Same as password',
+                        hintStyle: TextStyle(
+                            color: Color.fromRGBO(255, 255, 255, 0.8),
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w700
+                        )
+                    ),
+                  )
+              ),
+              Divider(
+                color: Colors.white,
+              ),
               Spacer(),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
@@ -95,7 +144,7 @@ class RegisterScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                         splashColor: Colors.blueAccent,
                         onPressed: () {
-                          Navigator.of(context).pushNamed('/');
+                          Navigator.of(context).pushNamed('/home');
                         },
                         child: Text(
                           "Sign up",

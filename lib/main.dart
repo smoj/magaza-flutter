@@ -5,6 +5,7 @@ import 'package:magaza_flutter/magaza_ui/screens/intro_slider.dart';
 import 'package:magaza_flutter/magaza_ui/screens/auth_tab.dart';
 import 'package:magaza_flutter/magaza_ui/screens/detail.dart';
 import 'package:magaza_flutter/magaza_ui/screens/home.dart';
+import 'package:magaza_flutter/magaza_ui/screens/register.dart';
 import 'package:magaza_flutter/magaza_ui/screens/search.dart';
 import 'package:magaza_flutter/magaza_ui/screens/splash.dart';
 import 'package:magaza_flutter/magaza_ui/screens/favourite.dart';
