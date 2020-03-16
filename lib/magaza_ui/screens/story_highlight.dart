@@ -80,13 +80,20 @@ class StoryHighlight extends StatelessWidget {
                       onPressed: (){
                         Navigator.pushNamed(context, '/detail');
                       },
-                      child: Text('Read Article'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(
-                          fontFamily: 'Montserrat',
-                          fontSize: 13,
-                          letterSpacing: 6,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white
-                      ),),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(50)
+                        ),
+                        child: Text('Read Article'.toUpperCase(), textAlign: TextAlign.center, style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontSize: 13,
+                            letterSpacing: 6,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey.shade700
+                        ),),
+                      ),
                     ),
                   ],
                 ),

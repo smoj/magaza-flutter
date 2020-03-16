@@ -16,9 +16,10 @@ class RegisterScreen extends StatelessWidget {
 //        ),),
 //      ),
       resizeToAvoidBottomPadding: false,
+      backgroundColor: Color.fromRGBO(57, 127, 249, 1),
       body: SingleChildScrollView(
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.85,
+          height: MediaQuery.of(context).size.height * 1.1,
           decoration: BoxDecoration(
             color: Color.fromRGBO(57, 127, 249, 1),
 //          image: DecorationImage(
