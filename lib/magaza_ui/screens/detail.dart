@@ -47,8 +47,8 @@ class DetailScreen extends StatelessWidget {
                             image: AdvancedNetworkImage(
                               'https://picsum.photos/300/300',
                               loadedCallback: () => print('Network Image loaded.'),
-                              loadFailedCallback: () => print('Oh, no! Image failed!'),
-                              timeoutDuration: Duration(seconds: 30),
+                              loadFailedCallback: () => print('Oh, no! Image failed! Timeout and Retry limit exceeded'),
+                              timeoutDuration: Duration(seconds: 60),
                               retryLimit: 2,
                             ),
                           )

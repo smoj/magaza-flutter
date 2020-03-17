@@ -26,8 +26,8 @@ class FavouriteItem extends StatelessWidget {
                     image: AdvancedNetworkImage(
                       this.imageUrl,
                       loadedCallback: () => print('Network Image loaded.'),
-                      loadFailedCallback: () => print('Oh, no! image load failed!'),
-                      timeoutDuration: Duration(seconds: 30),
+                      loadFailedCallback: () => print('Oh, no! image load failed! Timeout and Retry limit exceeded'),
+                      timeoutDuration: Duration(seconds: 60),
                       retryLimit: 2,
                     ),
                     fit: BoxFit.fitWidth,

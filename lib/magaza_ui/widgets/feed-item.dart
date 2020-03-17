@@ -36,8 +36,8 @@ class FeedItem extends StatelessWidget {
             image: AdvancedNetworkImage(
               this.imageUrl,
               loadedCallback: () => print('Network Image $imageUrl loaded.'),
-              loadFailedCallback: () => print('Oh, no! $imageUrl failed!'),
-              timeoutDuration: Duration(seconds: 30),
+              loadFailedCallback: () => print('Oh, no! $imageUrl failed! Timeout and Retry limit exceeded'),
+              timeoutDuration: Duration(seconds: 60),
               retryLimit: 2,
             ),
             fit: BoxFit.fitWidth,

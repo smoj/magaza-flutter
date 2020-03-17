@@ -24,8 +24,8 @@ class ArticleItem extends StatelessWidget {
                 image: AdvancedNetworkImage(
                   this.url,
                   loadedCallback: () => print('Network Image $url loaded.'),
-                  loadFailedCallback: () => print('Oh, no! $url failed!'),
-                  timeoutDuration: Duration(seconds: 30),
+                  loadFailedCallback: () => print('Oh, no! $url failed! Timeout and Retry limit exceeded'),
+                  timeoutDuration: Duration(seconds: 60),
                   retryLimit: 2,
                 ),
                 fit: BoxFit.fitWidth,
