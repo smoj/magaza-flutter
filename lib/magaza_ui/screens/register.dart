@@ -62,6 +62,7 @@ class RegisterScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 0),
                   child: TextField(
                     controller: TextEditingController(text: ''),
+                    keyboardType: TextInputType.number,
                     style: TextStyle(
                         color: Colors.white
                     ),

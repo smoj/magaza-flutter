@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:magaza_flutter/magaza_ui/screens/forgot.dart';
-import 'package:magaza_flutter/magaza_ui/screens/intro_slider.dart';
 import 'package:magaza_flutter/magaza_ui/screens/auth_tab.dart';
 import 'package:magaza_flutter/magaza_ui/screens/detail.dart';
 import 'package:magaza_flutter/magaza_ui/screens/home.dart';
@@ -11,6 +10,7 @@ import 'package:magaza_flutter/magaza_ui/screens/splash.dart';
 import 'package:magaza_flutter/magaza_ui/screens/favourite.dart';
 import 'package:magaza_flutter/magaza_ui/screens/story_highlight.dart';
 import 'package:magaza_flutter/magaza_ui/screens/profile.dart';
+import 'package:magaza_flutter/magaza_ui/screens/i_slider.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         '/login' : (context) => AuthTabScreen(),
         '/search' : (context) => SearchScreen(),
         '/forgot' : (context) => ForgotScreen(),
-        '/slider' : (context) => IntroSliderScreen(),
+        '/slider' : (context) => ISliderScreen(),
         '/favourite' : (context) => FavouriteScreen(),
         '/story-highlight' : (context) => StoryHighlight(),
         '/profile' : (context) => ProfileScreen()
