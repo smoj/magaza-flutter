@@ -11,6 +11,7 @@ import 'package:magaza_flutter/magaza_ui/screens/favourite.dart';
 import 'package:magaza_flutter/magaza_ui/screens/story_highlight.dart';
 import 'package:magaza_flutter/magaza_ui/screens/profile.dart';
 import 'package:magaza_flutter/magaza_ui/screens/i_slider.dart';
+import 'package:magaza_flutter/magaza_ui/screens/edit_profile.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
         '/slider' : (context) => ISliderScreen(),
         '/favourite' : (context) => FavouriteScreen(),
         '/story-highlight' : (context) => StoryHighlight(),
-        '/profile' : (context) => ProfileScreen()
+        '/profile' : (context) => ProfileScreen(),
+        '/edit-profile' : (context) => EditProfilePage()
       },
       debugShowCheckedModeBanner: false,
     );

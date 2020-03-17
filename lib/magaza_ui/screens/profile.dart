@@ -24,6 +24,9 @@ class ProfileScreen extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.edit),
+            onPressed: (){
+              Navigator.pushNamed(context, '/edit-profile');
+            },
           )
         ],
         title: Text('Profile', style: TextStyle(
@@ -36,29 +39,6 @@ class ProfileScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Container(
-                alignment: Alignment.center,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.image, color: Colors.white,),
-                    SizedBox(width: 10,),
-                    Text('Tap to your image',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.w300,
-                          color: Colors.white,
-                          height: 1.2
-                      ),),
-                  ],
-                ),
-                color: Colors.grey.shade900,
-                height: 300,
-              ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(18, 20, 18, 16),
                 child: Row(
