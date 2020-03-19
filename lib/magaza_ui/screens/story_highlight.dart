@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_networkimage/provider.dart';
+import 'package:flutter_advanced_networkimage/transition.dart';
 
 class StoryHighlight extends StatelessWidget {
   @override
@@ -9,12 +11,17 @@ class StoryHighlight extends StatelessWidget {
           fit: StackFit.expand,
           children: <Widget>[
             Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/magaza/highlight-bg.png'),
-                  fit: BoxFit.fill
-                )
+              padding: EdgeInsets.zero,
+              child: TransitionToImage(
+              image: AdvancedNetworkImage(
+                'https://i.picsum.photos/id/201/539/969.jpg',
+                loadedCallback: () => print('Network Image loaded.'),
+                loadFailedCallback: () => print('Oh, no! Image failed! Timeout and Retry limit exceeded'),
+                timeoutDuration: Duration(seconds: 60),
+                retryLimit: 2,
               ),
+                fit: BoxFit.fitWidth,
+            ),
             ),
             Container(
               color: Color.fromRGBO(0, 0, 0, 0.6),

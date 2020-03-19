@@ -60,6 +60,7 @@ class LoginScreen extends StatelessWidget {
               Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 0),
                   child: TextField(
+                    obscureText: true,
                     style: TextStyle(
                         color: Colors.white
                     ),
